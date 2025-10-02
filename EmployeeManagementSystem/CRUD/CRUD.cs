@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace EmployeeManagementSystem.CRUD
 {
@@ -53,11 +54,11 @@ namespace EmployeeManagementSystem.CRUD
         {
             con.Open();
                 cmd = new OleDbCommand();
-                {
+            { 
                     var withBlock = cmd;
                     withBlock.Connection = con;
                     withBlock.CommandText = SQL;
-                }
+               }
             da = new OleDbDataAdapter();
             da.SelectCommand = cmd;
             dt = new DataTable();
@@ -94,8 +95,10 @@ namespace EmployeeManagementSystem.CRUD
             }
             else
             {
-
+                con.Close();
+                return false;
             }
+            con.Close();
         }
     }
 }

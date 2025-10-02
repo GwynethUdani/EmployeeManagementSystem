@@ -58,7 +58,7 @@ namespace EmployeeManagementSystem
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new frmAddEmployee());
         }
 
         private void pnlTitleBar_Paint(object sender, PaintEventArgs e)

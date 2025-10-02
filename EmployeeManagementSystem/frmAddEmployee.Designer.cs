@@ -31,13 +31,13 @@
             this.pnlAddEmployee = new System.Windows.Forms.Panel();
             this.lblAddEmployee = new System.Windows.Forms.Label();
             this.GroupBox = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ComboBox = new System.Windows.Forms.ComboBox();
-            this.tbLocalNumber = new System.Windows.Forms.TextBox();
-            this.tbEmailAddress = new System.Windows.Forms.TextBox();
-            this.tbRequestorName = new System.Windows.Forms.TextBox();
+            this.btnInsertUpdate = new System.Windows.Forms.Button();
+            this.cmbSection = new System.Windows.Forms.ComboBox();
+            this.txtLocalNumber = new System.Windows.Forms.TextBox();
+            this.txtEmailAddress = new System.Windows.Forms.TextBox();
+            this.txtRequestorName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.tbEmployeeNumber = new System.Windows.Forms.TextBox();
+            this.txtEmpID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,13 +71,13 @@
             // GroupBox
             // 
             this.GroupBox.BackColor = System.Drawing.Color.IndianRed;
-            this.GroupBox.Controls.Add(this.button1);
-            this.GroupBox.Controls.Add(this.ComboBox);
-            this.GroupBox.Controls.Add(this.tbLocalNumber);
-            this.GroupBox.Controls.Add(this.tbEmailAddress);
-            this.GroupBox.Controls.Add(this.tbRequestorName);
+            this.GroupBox.Controls.Add(this.btnInsertUpdate);
+            this.GroupBox.Controls.Add(this.cmbSection);
+            this.GroupBox.Controls.Add(this.txtLocalNumber);
+            this.GroupBox.Controls.Add(this.txtEmailAddress);
+            this.GroupBox.Controls.Add(this.txtRequestorName);
             this.GroupBox.Controls.Add(this.btnSearch);
-            this.GroupBox.Controls.Add(this.tbEmployeeNumber);
+            this.GroupBox.Controls.Add(this.txtEmpID);
             this.GroupBox.Controls.Add(this.label4);
             this.GroupBox.Controls.Add(this.label3);
             this.GroupBox.Controls.Add(this.label2);
@@ -91,59 +91,59 @@
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "Employee Details Manual Insert and Update";
             // 
-            // button1
+            // btnInsertUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCoral;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(152, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "INSERT / UPDATE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInsertUpdate.BackColor = System.Drawing.Color.LightCoral;
+            this.btnInsertUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertUpdate.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertUpdate.Location = new System.Drawing.Point(152, 160);
+            this.btnInsertUpdate.Name = "btnInsertUpdate";
+            this.btnInsertUpdate.Size = new System.Drawing.Size(145, 23);
+            this.btnInsertUpdate.TabIndex = 11;
+            this.btnInsertUpdate.Text = "INSERT / UPDATE";
+            this.btnInsertUpdate.UseVisualStyleBackColor = false;
+            this.btnInsertUpdate.Click += new System.EventHandler(this.btnInsertUpdate_Click);
             // 
-            // ComboBox
+            // cmbSection
             // 
-            this.ComboBox.BackColor = System.Drawing.Color.RosyBrown;
-            this.ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ComboBox.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox.FormattingEnabled = true;
-            this.ComboBox.Location = new System.Drawing.Point(152, 131);
-            this.ComboBox.Name = "ComboBox";
-            this.ComboBox.Size = new System.Drawing.Size(262, 23);
-            this.ComboBox.TabIndex = 10;
-            this.ComboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedIndexChanged);
+            this.cmbSection.BackColor = System.Drawing.Color.RosyBrown;
+            this.cmbSection.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbSection.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSection.FormattingEnabled = true;
+            this.cmbSection.Location = new System.Drawing.Point(152, 131);
+            this.cmbSection.Name = "cmbSection";
+            this.cmbSection.Size = new System.Drawing.Size(262, 23);
+            this.cmbSection.TabIndex = 10;
             // 
-            // tbLocalNumber
+            // txtLocalNumber
             // 
-            this.tbLocalNumber.AcceptsReturn = true;
-            this.tbLocalNumber.BackColor = System.Drawing.Color.RosyBrown;
-            this.tbLocalNumber.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLocalNumber.Location = new System.Drawing.Point(152, 105);
-            this.tbLocalNumber.Name = "tbLocalNumber";
-            this.tbLocalNumber.Size = new System.Drawing.Size(262, 21);
-            this.tbLocalNumber.TabIndex = 9;
+            this.txtLocalNumber.AcceptsReturn = true;
+            this.txtLocalNumber.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtLocalNumber.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalNumber.Location = new System.Drawing.Point(152, 105);
+            this.txtLocalNumber.Name = "txtLocalNumber";
+            this.txtLocalNumber.Size = new System.Drawing.Size(262, 21);
+            this.txtLocalNumber.TabIndex = 9;
             // 
-            // tbEmailAddress
+            // txtEmailAddress
             // 
-            this.tbEmailAddress.AcceptsReturn = true;
-            this.tbEmailAddress.BackColor = System.Drawing.Color.RosyBrown;
-            this.tbEmailAddress.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmailAddress.Location = new System.Drawing.Point(152, 79);
-            this.tbEmailAddress.Name = "tbEmailAddress";
-            this.tbEmailAddress.Size = new System.Drawing.Size(384, 21);
-            this.tbEmailAddress.TabIndex = 8;
+            this.txtEmailAddress.AcceptsReturn = true;
+            this.txtEmailAddress.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtEmailAddress.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailAddress.Location = new System.Drawing.Point(152, 79);
+            this.txtEmailAddress.Name = "txtEmailAddress";
+            this.txtEmailAddress.Size = new System.Drawing.Size(384, 21);
+            this.txtEmailAddress.TabIndex = 8;
             // 
-            // tbRequestorName
+            // txtRequestorName
             // 
-            this.tbRequestorName.AcceptsReturn = true;
-            this.tbRequestorName.BackColor = System.Drawing.Color.RosyBrown;
-            this.tbRequestorName.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRequestorName.Location = new System.Drawing.Point(152, 53);
-            this.tbRequestorName.Name = "tbRequestorName";
-            this.tbRequestorName.Size = new System.Drawing.Size(384, 21);
-            this.tbRequestorName.TabIndex = 7;
+            this.txtRequestorName.AcceptsReturn = true;
+            this.txtRequestorName.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtRequestorName.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRequestorName.Location = new System.Drawing.Point(152, 53);
+            this.txtRequestorName.Name = "txtRequestorName";
+            this.txtRequestorName.Size = new System.Drawing.Size(384, 21);
+            this.txtRequestorName.TabIndex = 7;
             // 
             // btnSearch
             // 
@@ -157,14 +157,14 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // tbEmployeeNumber
+            // txtEmpID
             // 
-            this.tbEmployeeNumber.BackColor = System.Drawing.Color.RosyBrown;
-            this.tbEmployeeNumber.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmployeeNumber.Location = new System.Drawing.Point(152, 27);
-            this.tbEmployeeNumber.Name = "tbEmployeeNumber";
-            this.tbEmployeeNumber.Size = new System.Drawing.Size(181, 21);
-            this.tbEmployeeNumber.TabIndex = 5;
+            this.txtEmpID.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtEmpID.Font = new System.Drawing.Font("Century Schoolbook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpID.Location = new System.Drawing.Point(152, 27);
+            this.txtEmpID.Name = "txtEmpID";
+            this.txtEmpID.Size = new System.Drawing.Size(181, 21);
+            this.txtEmpID.TabIndex = 5;
             // 
             // label4
             // 
@@ -205,7 +205,6 @@
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Requestor Name :";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblEmployeeNumber
             // 
@@ -216,7 +215,6 @@
             this.lblEmployeeNumber.Size = new System.Drawing.Size(141, 16);
             this.lblEmployeeNumber.TabIndex = 0;
             this.lblEmployeeNumber.Text = "Employee Number :";
-            this.lblEmployeeNumber.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmAddEmployee
             // 
@@ -228,6 +226,7 @@
             this.Controls.Add(this.pnlAddEmployee);
             this.Name = "frmAddEmployee";
             this.Text = "frmAddEmployee";
+            this.Load += new System.EventHandler(this.frmAddEmployee_Load);
             this.pnlAddEmployee.ResumeLayout(false);
             this.pnlAddEmployee.PerformLayout();
             this.GroupBox.ResumeLayout(false);
@@ -247,11 +246,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox tbEmployeeNumber;
-        private System.Windows.Forms.ComboBox ComboBox;
-        private System.Windows.Forms.TextBox tbLocalNumber;
-        private System.Windows.Forms.TextBox tbEmailAddress;
-        private System.Windows.Forms.TextBox tbRequestorName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtEmpID;
+        private System.Windows.Forms.ComboBox cmbSection;
+        private System.Windows.Forms.TextBox txtLocalNumber;
+        private System.Windows.Forms.TextBox txtEmailAddress;
+        private System.Windows.Forms.TextBox txtRequestorName;
+        private System.Windows.Forms.Button btnInsertUpdate;
     }
 }

@@ -17,14 +17,61 @@ namespace EmployeeManagementSystem
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void frmMasterData_Load(object sender, EventArgs e)
+        {
+            string select_tblrequestorlist = "select * from tbl_EmployeeData ORDER BY EmployeeNumber DESC";
+            CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
+        }
+        public static string selectedTransaction;
+        public static string LocalNumber;
+        public static string Name;
+        public static string Email;
+        public static string EmployeeID;
+        public static string Course;
+        public static string lblIdentifier;
+        public static string Section;
+
+        private void dtgMasterData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["ID"].Value.ToString(); 
+            frmMasterData.selectedTransaction = lblTransactionNo.Text;
+            frmMasterData.Name = dtgMasterData.Rows[e.RowIndex].Cells["RequestorName"].Value.ToString(); 
+            frmMasterData.Email = dtgMasterData.Rows[e.RowIndex].Cells["RequestorEmail"].Value.ToString(); 
+            frmMasterData.Section = dtgMasterData.Rows[e.RowIndex].Cells["Section"].Value.ToString(); 
+            frmMasterData.LocalNumber = dtgMasterData.Rows[e.RowIndex].Cells["LocalNumber"].Value.ToString(); 
+            frmMasterData.EmployeeID = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
+
+        }
+
+        private void dtgMasterData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+        }
+
+        public static string RequestorName { get; internal set; }
+
+        private void btnEditData_Click(object sender, EventArgs e)
+        {
+            if (lblTransactionNo.Text == "<TRANSACTION NUMBER>")
+
+                {
+                MessageBox.Show("Please select a corresponding data.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+                }
+
+            
+                frmAddEmployee OpenfrmAddEmployee = new frmAddEmployee();
+                OpenfrmAddEmployee.ShowDialog();
+          
+            
+           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

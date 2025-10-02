@@ -10,10 +10,8 @@ namespace EmployeeManagementSystem.CRUD
 {
      class connection
     {
-        static string dbPath = @"C:\LOCALDB\EMS\.mdb";
-        public static string conString = $"Provider=Microsoft.JET.OLEDB.4.0;Data Source={dbPath};";
-
-
+        static string dbPath = @"C:\LOCALDB\EMSS1.mdb";
+        public static string conString = $"Provider=Microsoft.JET.OLEDB.4.0;Data Source ={dbPath};";
 
         public static OleDbConnection mysqldb()
         {
